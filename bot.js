@@ -518,7 +518,6 @@ gg.send({embed : new Discord.RichEmbed()
 			msg.edit(embed)
         })
         })
-    })
     }
 });
 
