@@ -17,6 +17,10 @@ console.log('╚[═════════════════════
  });
  
  
+client.on('ready', () => {
+    client.user.setActivity("Legendary Shop..",{type: 'WATCHING'})
+
+});
  
  
 
