@@ -168,7 +168,7 @@ ms.delete()
         setTimeout(() => {
   b.edit(`**لقد تم ارسال طلبك .. **`)
         },10000);
-var gg = message.guild.channels.find('name', 'طلبات-النشر')
+var gg = message.guild.channels.find('name', 'الطلبات-الفرعية')
 if(!gg) return;
 if(gg) {
 gg.send({embed : new Discord.RichEmbed()
@@ -222,7 +222,7 @@ By Abo Khalil
 message.channel.send("**=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-**")
 message.channel.send("**=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-**")
 
-    message.channel.send("**اهلا وسهلا بكم في نظام طلبات بوتات الميوزك, قم بكتابة نوع الطلب**").then(e => {
+    message.channel.send("**اهلا وسهلا بكم في نظام طلبات بوتات النشر, قم بكتابة نوع الطلب**").then(e => {
     let filter = m => m.author.id === message.author.id
     let lan = '';
     let md = '';
@@ -461,7 +461,7 @@ By Abo Khalil
 message.channel.send("**=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-**")
 message.channel.send("**=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-**")
 
-    message.channel.send("**اهلا وسهلا بكم في نظام طلبات التصميم, قم بكتابة نوع الطلب**").then(e => {
+    message.channel.send("**اهلا وسهلا بكم في نظام طلبات البوتات, قم بكتابة نوع الطلب**").then(e => {
     let filter = m => m.author.id === message.author.id
     let lan = '';
     let md = '';
@@ -489,7 +489,7 @@ ms.delete()
         setTimeout(() => {
   b.edit(`..**لقد تم ارسال طلبك**`)
         },10000);
-var gg = message.guild.channels.find('name', 'طلبات-التصميم')
+var gg = message.guild.channels.find('name', 'طلبات-البوتات')
 if(!gg) return;
 if(gg) {
 gg.send({embed : new Discord.RichEmbed()
