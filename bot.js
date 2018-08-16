@@ -23,6 +23,64 @@ client.on('ready', () => {
 });
  
  
+client.on("guildMemberAdd", member => {
+  member.createDM().then(function (channel) {
+  return channel.send(` 
+╔[❖════════════════════════❖]╗
+
+السلام عليكم ورحمة الله وبركاته
+
+اهلا وسهلا بك في سيرفر
+
+... شكرا لدخولك السيرفر ...
+╚[❖════════════════════════❖]╝
+`) 
+}).catch(console.error)
+})
+
+
+const invites = {};
+
+client.on('guildMemberAdd', member => {
+  member.guild.fetchInvites().then(guildInvites => {
+    const alp = invites[member.guild.id];
+    const invite = guildInvites.find(i => alp.get(i.code).uses < i.uses);
+    const inviter = client.users.get(invite.inviter.id);
+    const abokhalilwelcome = member.guild.channels.find("name", "welcome");
+     abokhalilwelcome.send(`
+	 
+	 <@${member.user.id}> 
+	 اهلا وسهلا بك في السيرفر
+	 
+	 ${message.guild.memberCount} اصبح عدد السيرفر 
+	 
+	 by <@${inviter.id}>`);
+  }); 
+});
+
+
+client.on('message', message => {
+    if (message.content.startsWith("رابط")) {
+
+  message.channel.createInvite({
+        thing: true,
+        maxUses: 30,
+        maxAge: 8640,
+    }).then(invite =>
+      message.author.sendMessage(invite.url)
+    )
+  message.channel.send("**لقد تم ارسال الرابط برسالة خاصة**")
+
+message.author.send(`
+
+**مدة الرابط : يـوم
+عدد استخدامات الرابط : 30
+**`)
+
+
+    }
+});
+
 
  
  
