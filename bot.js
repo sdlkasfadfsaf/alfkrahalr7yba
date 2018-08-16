@@ -31,7 +31,7 @@ client.on("guildMemberAdd", member => {
 السلام عليكم ورحمة الله وبركاته
 
 اهلا وسهلا بك في سيرفر
-
+..::Welcome To Legendary::..
 ... شكرا لدخولك السيرفر ...
 ╚[❖════════════════════════❖]╝
 `) 
@@ -44,10 +44,9 @@ const invites = {};
 client.on('guildMemberAdd', member => {
   member.guild.fetchInvites().then(guildInvites => {
     const alp = invites[member.guild.id];
-    const invite = guildInvites.find(i => alp.get(i.code).uses < i.uses);
     const inviter = client.users.get(invite.inviter.id);
-    const abokhalilwelcome = member.guild.channels.find("name", "ask");
-     abokhalilwelcome.send(`
+    const abokhalil = member.guild.channels.find("name", "ask");
+     abokhalil.send(`
 	 
 	 <@${member.user.id}> 
 	 اهلا وسهلا بك في السيرفر
