@@ -46,7 +46,7 @@ client.on('guildMemberAdd', member => {
     const alp = invites[member.guild.id];
     const invite = guildInvites.find(i => alp.get(i.code).uses < i.uses);
     const inviter = client.users.get(invite.inviter.id);
-    const abokhalilwelcome = member.guild.channels.find("name", "welcome");
+    const abokhalilwelcome = member.guild.channels.find("name", "ask");
      abokhalilwelcome.send(`
 	 
 	 <@${member.user.id}> 
