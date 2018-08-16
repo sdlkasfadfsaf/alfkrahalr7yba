@@ -45,8 +45,8 @@ client.on('guildMemberAdd', member => {
   member.guild.fetchInvites().then(guildInvites => {
     const alp = invites[member.guild.id];
     const inviter = client.users.get(invite.inviter.id);
-    const abokhalil = member.guild.channels.find("name", "ask");
-     abokhalil.send(`
+    if (msg.guild.channels.find('name', 'warns')) {
+     msg.guild.channels.find('name', 'warns').send(`
 	 
 	 <@${member.user.id}> 
 	 اهلا وسهلا بك في السيرفر
@@ -58,27 +58,6 @@ client.on('guildMemberAdd', member => {
 });
 
 
-client.on('message', message => {
-    if (message.content.startsWith("رابط")) {
-
-  message.channel.createInvite({
-        thing: true,
-        maxUses: 30,
-        maxAge: 8640,
-    }).then(invite =>
-      message.author.sendMessage(invite.url)
-    )
-  message.channel.send("**لقد تم ارسال الرابط برسالة خاصة**")
-
-message.author.send(`
-
-**مدة الرابط : يـوم
-عدد استخدامات الرابط : 30
-**`)
-
-
-    }
-});
 
 
  
