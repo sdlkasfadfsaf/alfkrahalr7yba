@@ -54,7 +54,6 @@ client.on('guildMemberAdd', member => {
 	 ${message.guild.memberCount} اصبح عدد السيرفر 
 	 
 	 by <@${inviter.id}>`);
-  }); 
 });
 
 
